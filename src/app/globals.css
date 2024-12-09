@@ -17,8 +17,8 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: #0a0a0a;
+  background: #E1F4F3;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -39,4 +39,9 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+#mainBodyInLayout{
+  display: flex;
+  height: 100vh;
 }
