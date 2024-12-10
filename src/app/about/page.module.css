@@ -1,0 +1,82 @@
+.mainbody {
+  text-align: center;
+  padding: 80px 15rem 0;
+}
+.logo {
+  height: 300px;
+  width: 100%;
+  margin-top: 2rem;
+  /* border-radius: 25px; */
+}
+
+/* @property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.logo::after,
+.logo::before {
+  content: "";
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  background-image: conic-gradient(
+    from var(--angle),
+    #ff4545,
+    #00ff99,
+    #006aff,
+    #ff0095,
+    #ff4545
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  animation: 3s spin linear infinite;
+}
+
+.logo::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+} */
+
+.paragraph {
+  font-size: 20px;
+}
+
+.skillCard{
+    /* background-color: #393E46; */
+    border: 1px solid #393E46;
+    width: 200px;
+    height: 200px;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.skillCard.visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+

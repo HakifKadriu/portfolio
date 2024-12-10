@@ -18,7 +18,7 @@ body {
 
 body {
   color: #0a0a0a;
-  background: #E1F4F3;
+  background: #e1f4f3;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,7 +41,18 @@ a {
   }
 }
 
-#mainBodyInLayout{
+#mainBodyInLayout {
   display: flex;
   height: 100vh;
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
 }

@@ -52,8 +52,8 @@ export const Navigation = () => {
       </div>
       <div className={styles.navbar}>
         <div className={styles.navbarlink1}><Link href="/">Home</Link></div>
-        <div className={styles.navbarlink2}><Link href="#">Projects</Link></div>
-        <div className={styles.navbarlink3}><Link href="#">About</Link></div>
+        <div className={styles.navbarlink2}><Link href="/projects">Projects</Link></div>
+        <div className={styles.navbarlink3}><Link href="/about">About</Link></div>
       </div>
     </div>
   );
