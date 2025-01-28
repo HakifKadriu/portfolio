@@ -14,10 +14,10 @@
     "@fontsource/roboto": "^5.1.0",
     "@mui/icons-material": "^6.1.10",
     "@mui/material": "^6.1.10",
-    "@next/font": "^14.2.15",
     "bootstrap": "^5.3.3",
-    "next": "15.0.4",
+    "next": "^15.1.0",
     "react": "^19.0.0",
+    "react-bootstrap": "^2.10.6",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {

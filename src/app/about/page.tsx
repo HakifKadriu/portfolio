@@ -1,6 +1,5 @@
 "use client";
 import styles from "./page.module.css";
-import * as font from "../fonts";
 import Image from "next/image";
 import fulllogo from "../../../public/fulllogowallpaperdark.png";
 import JavascriptIcon from "./icons/javascript-16-svgrepo-com.svg";
@@ -14,9 +13,50 @@ import sass from "./icons/sass-svgrepo-com.svg";
 import unity from "./icons/unity-svgrepo-com.svg";
 import gamemaker from "./icons/light-gamemaker2-svgrepo-com.svg";
 import mongodb from "./icons/mongodb-svgrepo-com.svg";
-import phaser from "./icons/phaser-logo.svg";
 import database from "./icons/database-02-svgrepo-com.svg";
 import { useState, useEffect } from "react";
+import * as font from "../fonts/font";
+import Link from "next/link";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+
+function ContactModal() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  return (
+    <>
+      <Button
+        variant="primary"
+        onClick={handleShow}
+        className={`${styles.contactbutton} ${font.poppinsregular.className}`}
+      >
+        Contact Me
+      </Button>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header>
+          <Modal.Title>Email Address</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <div>hakif.kadriu@umib.net</div>
+          <div>hakifkadriup@gmail.com</div>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button
+            variant="secondary"
+            onClick={handleClose}
+            style={{ width: "100%" }}
+          >
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
+}
 
 function SkillCard() {
   const [items, setItem] = useState([
@@ -65,7 +105,7 @@ function SkillCard() {
         width={50}
         height={50}
       />
-      <p style={{ fontSize: "20px" }} className={font.robotoBlack.className}>
+      <p style={{ fontSize: "20px" }} className={font.poppinsmedium.className}>
         {item[0]}
       </p>
     </div>
@@ -82,20 +122,12 @@ export default function About() {
         >
           About Me
         </h1>
-        <div className={`${font.robotoLight.className} ${styles.paragraph}`}>
-          "Hi, I'm Kifa, a 21 year old boy who lives in Kosovo. I love coding
+        <div className={`${font.poppinslight.className} ${styles.paragraph}`}>
+          Hi, I'm Kifa, a 21 year old boy who lives in Kosovo. I love coding
           random stuff and learning new things everyday for the fun of it. When
           I'm not coding up new projects, you can find me playing and watching
           football, hanging out with friends, or playing video games to unwind.
           <br></br>
-          <br></br>I'm a social person who loves meeting new people and making
-          connections—whether it's sharing stories over coffee or cheering on my
-          favorite team at a match. I'm always on the lookout for new challenges
-          and ways to grow, both in tech and in life. Whether it's solving
-          tricky coding problems, collaborating with others, or just enjoying
-          life's simple pleasures, I'm all about spreading positivity and having
-          fun. I'm excited to share my work and connect with like-minded people
-          who share my passion for creativity and adventure!<br></br>
           <br></br>I am a web developer and final-year computer science student
           passionate about crafting interactive websites, games, and digital
           experiences. I thrive on solving challenging problems and turning
@@ -106,7 +138,7 @@ export default function About() {
           constantly exploring new technologies, improving my skills, and
           working on exciting personal projects. I'm driven by curiosity,
           creativity, and a desire to make a meaningful impact through
-          technology."
+          technology.
         </div>
         <div className={styles.logo}>
           <Image
@@ -130,7 +162,7 @@ export default function About() {
           Skills
         </h1>
         <h4
-          className={`${font.robotoLight.className}`}
+          className={`${font.poppinsmedium.className}`}
           style={{ marginBottom: "1rem" }}
         >
           Some of my skills include working with:
@@ -141,12 +173,18 @@ export default function About() {
             flexWrap: "wrap",
             justifyContent: "center",
             gap: "1rem",
-            paddingBottom: "25rem",
+            paddingBottom: "15rem",
           }}
         >
           <SkillCard />
         </div>
-        <p className={font.robotoRegular.className} style={{paddingBottom: '1rem'}}>Hakif Kadriu - 2024</p>
+        <ContactModal />
+        <p
+          className={font.poppinslight.className}
+          style={{ paddingBottom: "1rem" }}
+        >
+          Hakif Kadriu - 2024
+        </p>
       </div>
     </div>
   );

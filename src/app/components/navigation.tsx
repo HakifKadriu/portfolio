@@ -5,6 +5,7 @@ import FacebookIcon from "../../../public/facebook.svg";
 import LinkedinIcon from "../../../public/linkedin.svg";
 import TwitterIcon from "../../../public/twitter.svg";
 import InstagramIcon from "../../../public/instagram.svg";
+import GithubIcon from "../../../public/github-svgrepo-com (1).svg";
 
 export const Navigation = () => {
   return (
@@ -20,6 +21,7 @@ export const Navigation = () => {
             alt="Follow us on Twitter"
             width={36}
             height={36}
+            title="LinkedIn Account"
           />
         </Link>
         <Link href={"https://www.instagram.com/hakiffkadriuu/"} target="_blank">
@@ -29,6 +31,7 @@ export const Navigation = () => {
             alt="Follow us on Twitter"
             width={36}
             height={36}
+            title="Instagram Account"
           />
         </Link>
         <Link href={"https://www.facebook.com/hakiffkadriuu/"} target="_blank">
@@ -38,6 +41,7 @@ export const Navigation = () => {
             alt="Follow us on Twitter"
             width={36}
             height={36}
+            title="Facebook Account"
           />
         </Link>
         <Link href={"https://x.com/justkifa"} target="_blank">
@@ -47,6 +51,17 @@ export const Navigation = () => {
             alt="Follow us on Twitter"
             width={36}
             height={36}
+            title="Twitter Account"
+          />
+        </Link>
+        <Link href={"https://github.com/HakifKadriu"} target="_blank">
+          <Image
+            priority
+            src={GithubIcon}
+            alt="Follow us on Twitter"
+            width={36}
+            height={36}
+            title="GitHub Account"
           />
         </Link>
       </div>

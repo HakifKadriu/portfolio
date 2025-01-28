@@ -3,7 +3,7 @@
     /* flex-direction: column; */
 }
 .sociallinkdiv{
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,7 +15,7 @@
 }
 
 .navbar{
-    position: absolute;
+    position: fixed;
     display: flex;
     margin-left: 1rem;
     padding-top: 1rem;
